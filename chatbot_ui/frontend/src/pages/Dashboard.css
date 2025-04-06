@@ -1,57 +1,63 @@
-/* Dashboard Page */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+
 .dashboard-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #121212 0%, #1a1a2e 100%);
-  padding: 2rem;
-  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1f1f2e); /* Matches WhatsHot background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem; /* Matches WhatsHot padding */
+  font-family: "Inter", sans-serif; /* Matches WhatsHot font */
 }
 
-/* Dashboard Container */
 .dashboard-container {
   width: 100%;
   max-width: 1200px;
-  background: rgba(26, 35, 58, 0.9);
+  background: rgba(255, 255, 255, 0.05); /* Glassmorphism from WhatsHot */
+  backdrop-filter: blur(20px);
   border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem; /* Matches WhatsHot padding */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Matches WhatsHot border */
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1); /* Matches WhatsHot shadow */
+  color: white;
 }
 
-/* Header Styling */
 .dashboard-container h1 {
   text-align: center;
   font-size: 2.8rem;
-  color: #00bcd4;
-  font-weight: 700;
+  font-weight: 800; /* Matches WhatsHot title weight */
   margin-bottom: 1rem;
-  text-shadow: 0 2px 4px rgba(0, 188, 212, 0.2);
+  background: linear-gradient(to right, #00f0ff, #39ff14); /* WhatsHot gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 255, 255, 0.2); /* Adjusted shadow to match gradient */
 }
 
-/* Charts Grid */
-
-
-/* Chart Section */
+/* Charts Grid (Assuming a grid layout similar to WhatsHot cards) */
 .chart-section {
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(255, 255, 255, 0.06); /* Matches WhatsHot card background */
   border-radius: 15px;
   padding: 1.5rem;
-  border: 1px solid rgba(0, 188, 212, 0.1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Matches WhatsHot border */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05); /* Matches WhatsHot shadow */
+  transition: all 0.3s ease; /* Matches WhatsHot transition */
 }
 
-/* Chart Section Heading */
+.chart-section:hover {
+  transform: translateY(-5px); /* Matches WhatsHot hover effect */
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2); /* Matches WhatsHot hover shadow */
+}
+
 .chart-section h2 {
   text-align: center;
   font-size: 1.5rem;
-  color: #00bcd4;
+  font-weight: 600; /* Matches WhatsHot card heading weight */
   margin-bottom: 1rem;
+  background: linear-gradient(to right, #00f0ff, #39ff14); /* WhatsHot gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Chart Wrapper */
 .chart-wrapper {
   position: relative;
   width: 100%;
@@ -61,18 +67,38 @@
 /* Error Message */
 .error {
   text-align: center;
-  color: #ff6b6b;
+  color: #ff6b6b; /* Retained original error color */
   font-weight: 600;
   padding: 1rem;
-  background: rgba(255, 107, 107, 0.1);
+  background: rgba(255, 107, 107, 0.1); /* Retained original background */
   border-radius: 10px;
-  border: 1px solid rgba(255, 107, 107, 0.2);
+  border: 1px solid rgba(255, 107, 107, 0.2); /* Retained original border */
+  margin-bottom: 1rem; /* Added for consistency */
 }
 
 /* Loading Message */
 .dashboard-container p {
   text-align: center;
   font-size: 1.2rem;
-  color: #00bcd4;
-  font-weight: 500;
+  font-weight: 500; /* Matches WhatsHot text weight */
+  color: #ccc; /* Adjusted to match WhatsHot card text */
+  margin-bottom: 1rem; /* Added for consistency */
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 1.5rem; /* Reduced padding for mobile */
+  }
+
+  .dashboard-container h1 {
+    font-size: 2rem; /* Reduced font size for mobile */
+  }
+
+  .chart-section {
+    margin-bottom: 1.5rem; /* Added spacing between sections on mobile */
+  }
+
+  .chart-wrapper {
+    height: 300px; /* Reduced height for mobile */
+  }
 }
